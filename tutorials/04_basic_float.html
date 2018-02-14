@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 3</title>
+
+    <style>
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>DIV is default display in block</h1>
+    <div class="box">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h1>float left & right</h1>
+    <div class="box">
+        <div class="box" style="float: left;">1</div>
+        <div class="box" style="float: left;">2</div>
+        <div class="box" style="float: right;">3</div>
+        <div class="box" style="float: right;">4</div>
+    </div>
+
+    <h1>float left + clear left</h1>
+    <div class="box">
+        <div class="box" style="float: left;">1</div>
+        <div class="box" style="float: left;">2</div>
+        <div class="box" style="float: left;">3</div>
+        <div class="box" style="clear: left;">4</div>
+    </div>
+
+    <h1>float left + clear right</h1>
+    <div class="box">
+        <div class="box" style="float: left;">1</div>
+        <div class="box" style="float: left;">2</div>
+        <div class="box" style="float: left;">3</div>
+        <div class="box" style="clear: right;">4</div>
+    </div>
+
+    <h1>float right + clear left</h1>
+    <div class="box">
+        <div class="box" style="float: right;">1</div>
+        <div class="box" style="float: right;">2</div>
+        <div class="box" style="float: right;">3</div>
+        <div class="box" style="clear: left;">4</div>
+    </div>
+
+    <h1>float right + clear right</h1>
+    <div class="box">
+        <div class="box" style="float: right;">1</div>
+        <div class="box" style="float: right;">2</div>
+        <div class="box" style="float: right;">3</div>
+        <div class="box" style="clear: right;">4</div>
+    </div>
+
+    <h1>float left & right + clear both</h1>
+    <div class="box">
+        <div class="box" style="float: left;">1</div>
+        <div class="box" style="float: left;">2</div>
+        <div class="box" style="float: right;">3</div>
+        <div class="box" style="float: right;">4</div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <h1>Mixing to use</h1>
+    <div class="box">
+        <div class="box" style="float: left;">1</div>
+        <div class="box" style="float: right;">2</div>
+        <div class="box" style="float: left; clear: left;">3</div>
+        <div class="box" style="float: right;">4</div>
+        <div class="box" style="float: left;">5</div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <h1>Shortcut for clear both fix</h1>
+    <style>
+        .clearfix:after {
+            content: " ";
+            display: block;
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+    </style>
+    <div class="box clearfix">
+        <div class="box" style="float: left;">1</div>
+        <div class="box" style="float: left;">2</div>
+        <div class="box" style="float: right;">3</div>
+        <div class="box" style="float: right;">4</div>
+    </div>
+
+    <h1>Use for layout</h1>
+    <div class="clearfix">
+        <div class="box clearfix">
+            <div style="float: left">Header nav menu</div>
+            <div style="float: right">Header nav float right menu</div>
+        </div>
+
+        <div class="clearfix">
+            <div class="box" style="float: left; width: 10%; min-height: 400px;">Left menu</div>
+            <div class="box" style="float: left; width: 80%; min-height: 400px;">Main content</div>
+            <div class="box" style="float: left; width: 10%; min-height: 400px;">Right menu</div>
+        </div>
+    </div>
+
+</html>
