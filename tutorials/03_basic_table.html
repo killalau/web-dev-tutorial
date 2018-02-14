@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 3</title>
+
+    <style>
+        .border {
+            border: 1px solid black;
+        }
+
+        .border td,
+        .border th {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Width auto adjust</h1>
+    <table class="border" style="width: 400px;">
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <table class="border" style="width: 400px;">
+        <tbody>
+            <tr>
+                <td>This cell has a long text</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <table class="border" style="width: 400px;">
+        <tbody>
+            <tr>
+                <td style="width: 50px;">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Cell merge (colspan / rowspan)</h1>
+    <table class="border">
+        <thead>
+            <tr>
+                <th>1</th>
+                <th colspan="2">2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Big Spacing</h1>
+    <table class="border" style="border-spacing: 10px;">
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>No Spacing</h1>
+    <table class="border" style="border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Use for layout</h1>
+    <table class="border" style="border-collapse: collapse; width: 100%">
+        <tbody>
+            <tr>
+                <td colspan="3" style="padding: 10px;">
+                    Header nav menu
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; vertical-align: top;">
+                    Left menu
+                </td>
+                <td style="padding: 10px; vertical-align: top; width: 80%;">
+                    <div style="min-height: 400px;">
+                        Main content
+                    </div>
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    Right menu
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
